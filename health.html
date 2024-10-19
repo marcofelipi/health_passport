@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte de Saúde</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Animate.css para animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+        h1 {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+
+        .status {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .status div {
+            background-color: #e9ecef;
+            margin-left: 20px;
+            border-radius: 15px;
+            width: 130px;
+        }
+
+        .status h2 {
+            font-size: 18px;
+            color: #495057;
+        }
+
+        .status p {
+            font-size: 18px;
+            color: #6c757d;
+            font-weight: bold;
+        }
+
+        .btn {
+            background-color: #17a2b8;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            border-radius: 50px;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #138496;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card animate__animated animate__fadeInUp">
+        <h1>Passaporte de Saúde</h1>
+
+        <div class="status">
+            <div>
+                <h2><i class="fas fa-heartbeat"></i> Batimentos por minuto</h2>
+                <p id="bpm">-- BPM</p>
+            </div>
+            <div>
+                <h2><i class="fas fa-lungs"></i> Oxigênio</h2>
+                <p id="oxigenio">-- %</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <div>
+                <h2><i class="fas fa-tachometer-alt"></i> Pressão</h2>
+                <p id="pressao">--/-- mmHg</p>
+            </div>
+            <div>
+                <h2><i class="fas fa-thermometer-half"></i> Graus</h2>
+                <p id="temperatura">-- °C</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="getHealthData()">Atualizar os dados</button>
+
+        <footer>Mantenha-se saudável!</footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Função para simular a coleta de dados de saúde
+        function getHealthData() {
+            const bpm = Math.floor(Math.random() * (100 - 60 + 1)) + 60;
+            const oxigenio = Math.floor(Math.random() * (100 - 90 + 1)) + 90;
+            const systolic = Math.floor(Math.random() * (140 - 110 + 1)) + 110;
+            const diastolic = Math.floor(Math.random() * (90 - 70 + 1)) + 70;
+            const temperatura = (Math.random() * (37.5 - 36 + 1) + 36).toFixed(1);
+
+            document.getElementById('bpm').textContent = `${bpm} BPM`;
+            document.getElementById('oxigenio').textContent = `${oxigenio} %`;
+            document.getElementById('pressao').textContent = `${systolic}/${diastolic} mmHg`;
+            document.getElementById('temperatura').textContent = `${temperatura} °C`;
+        }
+    </script>
+</body>
+</html>
