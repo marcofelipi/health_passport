@@ -60,23 +60,23 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/img/habitos-rotina-saudavel.jpg" class="d-block w-100" alt="Slide 1">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Mantenha-se saudável!</h5>
-              <a href="https://www.minhavida.com.br/receitas" target="_blank">Confira mais receitas saudáveis</a>
+            <div class="carousel-caption">
+              <h5>Como me alimentar melhor?</h5>
+              <a href="https://www.minhavida.com.br/receitas" target="_blank" style="color:white;">Receitas saudáveis de A-Z</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="/img/slide2.jpg" class="d-block w-100" alt="Slide 2">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Slide 2 Título</h5>
-              <p>Texto descritivo para o segundo slide.</p>
+            <img src="/img/water_drinking.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption">
+              <h5>Como posso organizar minha rotina?</h5>
+              <a href="https://blog.sabin.com.br/autocuidado/como-ter-uma-rotina-saudavel/" target="_blank" style="text-align: center; color: white">8 dicas práticas para ter uma rotina saudável</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="/img/slide3.jpg" class="d-block w-100" alt="Slide 3">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Slide 3 Título</h5>
-              <p>Texto descritivo para o terceiro slide.</p>
+            <img src="/img/lifestyle.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption">
+              <h5>Benefícios da vida saudável</h5>
+              <a href="https://www.terra.com.br/vida-e-estilo/comportamento/vida-saudavel-confira-os-beneficios" target="_blank" style="color:white">Confira os benefícios</a>
             </div>
           </div>
         </div>
@@ -89,10 +89,7 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
           <span class="visually-hidden">Próximo</span>
         </button>
       </div>
-      
-      <a href="https://blog.sabin.com.br/autocuidado/como-ter-uma-rotina-saudavel/" target="_blank" style="text-align: center">Como posso organizar minha rotina?</a><br>
-      <a href="https://www.minhavida.com.br/receitas" target="_blank">Confira mais receitas saudáveis</a>
-      <a href="https://www.minhavida.com.br/saude/dicas" target="_blank">Veja dicas de vida saudável</a>
+      <a href="https://www.doctoralia.com.br/medico-clinico-geral/passo-fundo" target="_blank" style="color:green; margin-top:10px">Consulte os médicos disponíveis na sua cidade</a>
     </div>
   `;
 });
