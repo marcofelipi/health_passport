@@ -62,6 +62,16 @@ body {
         /*margin-bottom: 10px;
         margin-top: 10px;*/
     }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: transparent; /* Deixa os botões transparentes */
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      background-color: transparent; /* Deixa o fundo transparente no hover */
+    }
     
 
   
