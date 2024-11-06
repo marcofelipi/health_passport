@@ -26,17 +26,19 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
     alert('Preencha a altura entre 0 e 2.3m.');
     return;
   }
-  if (idade<=14)
-  {
-    resultadoSaude='Consulte a <a href="/img/imcinfantil.png" target="_blank">tabela de IMC infantil</a>.';
-    document.body.innerHTML = `
-      <div class="container">
-        <p><strong>Estado de Saúde: </strong>${resultadoSaude}</p>
-      </div>`;
-    return;
-  }
 
   const imc = peso / (altura * altura);
+
+  if (idade<=14)
+    {
+      resultadoSaude='Consulte a <a href="/img/imcinfantil.png" target="_blank">tabela de IMC infantil</a>.';
+      document.body.innerHTML = `
+        <div class="container">
+          <p><strong>Seu IMC: </strong>${imc.toFixed(2)}</p>
+          <p><strong>Estado de Saúde: </strong>${resultadoSaude}</p>
+        </div>`;
+      return;
+    }
 
   if (imc < 18.5 && idade>14) {
     resultadoSaude = 'Abaixo do peso';
