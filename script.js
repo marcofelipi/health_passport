@@ -4,14 +4,16 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
   const idade = document.getElementById('idade').value;
   const peso = document.getElementById('peso').value;
   const altura = document.getElementById('altura').value;
+  let resultadoSaude = '';
+  let dicas = '';
 
   if (!idade || !peso || !altura) {
     alert('Por favor, preencha todos os campos!');
     return;
   }
 
-  if (idade < 0 || idade > 100) {
-    alert('Preencha a idade entre 0 a 100.');
+  if (idade < 2 || idade > 100) {
+    alert('Preencha a idade entre 2 a 100 anos.');
     return;
   }
 
@@ -24,21 +26,28 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
     alert('Preencha a altura entre 0 e 2.3m.');
     return;
   }
+  if (idade<=14)
+  {
+    resultadoSaude='Consulte a <a href="/img/imcinfantil.png" target="_blank">tabela de IMC infantil</a>.';
+    document.body.innerHTML = `
+      <div class="container">
+        <p><strong>Estado de Saúde: </strong>${resultadoSaude}</p>
+      </div>`;
+    return;
+  }
 
   const imc = peso / (altura * altura);
-  let resultadoSaude = '';
-  let dicas = '';
 
-  if (imc < 18.5) {
+  if (imc < 18.5 && idade>14) {
     resultadoSaude = 'Abaixo do peso';
     dicas = 'Considere consultar um nutricionista para orientações sobre alimentação saudável.';
-  } else if (imc >= 18.5 && imc < 24.9) {
+  } else if (imc >= 18.5 && imc < 24.9 && idade>14) {
     resultadoSaude = 'Peso normal';
     dicas = 'Continue mantendo uma alimentação balanceada e praticando exercícios físicos regularmente.';
-  } else if (imc >= 25 && imc < 29.9) {
+  } else if (imc >= 25 && imc < 29.9 && idade>14) {
     resultadoSaude = 'Sobrepeso';
     dicas = 'Tente perder peso com a ajuda de um profissional. A prática de exercícios é fundamental.';
-  } else {
+  } else if (imc>=29.9 && idade>14){
     resultadoSaude = 'Obesidade';
     dicas = 'Procure um médico ou nutricionista para um plano de emagrecimento saudável.';
   }
