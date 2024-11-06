@@ -45,10 +45,10 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
 
   document.body.innerHTML = `
     <div class="container">
-      <h1>Resultado</h1>
-      <p><strong>IMC: </strong>${imc.toFixed(2)}</p>
+      <img src="img/newlogo.PNG" style="margin-bottom: 10px">
+      <p><strong>Seu IMC: </strong>${imc.toFixed(2)}</p>
       <p><strong>Estado de Saúde: </strong>${resultadoSaude}</p>
-      <h2>Dicas para você:</h2>
+      <h3>Dicas para você:</h3>
       <p>${dicas}</p>
       <br>
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -76,7 +76,7 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
             <img src="/img/lifestyle.jpg" class="d-block w-100" alt="Slide 3">
             <div class="carousel-caption">
               <h5>Benefícios da vida saudável</h5>
-              <a href="https://www.terra.com.br/vida-e-estilo/comportamento/vida-saudavel-confira-os-beneficios" target="_blank" style="color:white">Confira os benefícios</a>
+              <a href="https://www.terra.com.br/vida-e-estilo/comportamento/vida-saudavel-confira-os-beneficios,dcbebcc4efeefc41a317ab11af3c18bfaq6b7064.html" target="_blank" style="color:white">Confira os benefícios</a>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ document.getElementById('imc-form').addEventListener('submit', function (event) 
           <span class="visually-hidden">Próximo</span>
         </button>
       </div>
-      <a href="https://www.doctoralia.com.br/medico-clinico-geral/passo-fundo" target="_blank" style="color:green; margin-top:10px">Consulte os médicos disponíveis na sua cidade</a>
+      <a href="https://www.doctoralia.com.br/medico-clinico-geral/passo-fundo" target="_blank" style="color:green; margin-top:10px; text-align: right;">Consulte os médicos disponíveis na sua cidade</a>
     </div>
   `;
 });
